@@ -1,0 +1,27 @@
+package br.com.cotiinformatica.domain.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import br.com.cotiinformatica.domain.entities.Categoria;
+import br.com.cotiinformatica.domain.interfaces.CategoriaService;
+import br.com.cotiinformatica.repositories.CategoriaRepository;
+
+@Service
+
+public class CategoriaServiceImpl implements CategoriaService{
+	@Autowired
+	CategoriaRepository categoriaRepository;
+	
+	
+	
+
+	@Override
+	public List<Categoria> FindAll() throws Exception {
+		// TODO Auto-generated method stub
+		return (List<Categoria>) categoriaRepository.findAll();
+	}
+
+}
